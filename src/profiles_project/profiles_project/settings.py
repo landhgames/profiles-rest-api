@@ -25,7 +25,7 @@ SECRET_KEY = '_gumi_i#a=3xx1+=i-5h#oevy)nn0=td^5klnt@@j3g^t5uju)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-18-188-207-41.us-east-2.compute.amazonaws.com']
 
 
 # Application definition
