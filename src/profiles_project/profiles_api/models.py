@@ -49,8 +49,20 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.name
 
     def get_short_name(self):
-        """USed to get a users short name."""
+        """Used to get a users short name."""
         return self.name
 
     def __str__(self):
-        return email
+        return self.email
+
+
+class ProfileFeedItem(models.Model):
+    """Profile status update"""
+    
+    user_profile = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
+    status_text = models.CharField(max_length=255)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        """Return models as a String"""
+        return self.status_text
